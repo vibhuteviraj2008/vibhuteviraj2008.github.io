@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Viraj Vibhute</title>
 
+<!-- Prevent search indexing -->
+<meta name="robots" content="noindex, nofollow">
+
 <style>
 *{
   box-sizing:border-box;
@@ -13,7 +16,7 @@
 
 body{
   margin:0;
-  background:#0b1220;
+  background:#020617;
   color:#e5e7eb;
   display:flex;
   justify-content:center;
@@ -21,41 +24,46 @@ body{
   min-height:100vh;
 }
 
+/* CARD SEPARATION */
 .card{
   position:relative;
   width:100%;
   max-width:360px;
-  padding:26px;
+  padding:28px 26px 30px;
   background:#020617;
-  border-radius:18px;
-  box-shadow:0 25px 50px rgba(0,0,0,0.45);
+  border-radius:20px;
+  border:1px solid #1e293b;
+  box-shadow:0 30px 60px rgba(0,0,0,0.55);
 }
 
-/* SMALL CORNER PHOTO */
+/* PHOTO – loads early & sharp */
 .photo{
   position:absolute;
-  top:18px;
-  right:18px;
-  width:48px;
-  height:48px;
+  top:28px;
+  right:26px;
+  width:52px;
+  height:52px;
   border-radius:50%;
   object-fit:cover;
-  border:1px solid #1e293b;
+  border:1px solid #334155;
 }
 
+/* NAME TREATMENT */
 h1{
-  margin:0;
-  font-size:1.4rem;
+  margin:4px 0 8px;
+  font-size:1.45rem;
   font-weight:600;
+  letter-spacing:0.3px;
 }
 
+/* ROLE */
 p{
-  margin:6px 0 22px;
+  margin:0 0 26px;
   font-size:0.9rem;
   color:#94a3b8;
 }
 
-/* BUTTONS */
+/* BUTTON BASE */
 .btn{
   display:block;
   width:100%;
@@ -83,10 +91,11 @@ p{
 }
 .primary:hover{ background:#334155; }
 
-/* SAVE CONTACT */
+/* SAVE CONTACT – LAST */
 .save{
   background:#0f766e;
   color:#ecfeff;
+  margin-top:6px;
 }
 .save:hover{ background:#115e59; }
 
@@ -94,7 +103,7 @@ p{
 .secondary{
   display:flex;
   gap:10px;
-  margin-top:14px;
+  margin:18px 0 14px;
 }
 .secondary a{
   flex:1;
@@ -112,24 +121,24 @@ p{
 <body>
 <div class="card">
 
-  <!-- SMALL PHOTO -->
-  <img src="photo.jpg" class="photo" alt="Your photo">
+  <!-- PHOTO -->
+  <img src="photo.jpg" class="photo" alt="Your photo" loading="eager" decoding="async">
 
   <h1>Viraj Vibhute</h1>
   <p>Student · Founder</p>
 
   <a class="btn call" href="tel:+917821878831">📞 Call</a>
-  <a class="btn primary" href="https://wa.me/917821878831">💬 WhatsApp</a>
+  <a class="btn primary" href="https://wa.me/917821878831?text=Hi%20Viraj">💬 WhatsApp</a>
   <a class="btn primary" href="mailto:vibhuteviraj2008@gmail.com">✉ Email</a>
-
-  <a class="btn save" href="contact.vcf" download>➕ Save Contact</a>
 
   <div class="secondary">
     <a href="https://instagram.com/vibhuteviraj2008">Instagram</a>
     <a href="https://linkedin.com/in/viraj-vibhute">LinkedIn</a>
   </div>
 
+  <!-- SAVE CONTACT LAST -->
+  <a class="btn save" href="contact.vcf" download>➕ Save Contact</a>
+
 </div>
 </body>
 </html>
-
